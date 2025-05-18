@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Pengetahuan Umum</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Kuis Pengetahuan Umum</h1>
+        <form action="{{ url_for('submit') }}" method="post" id="quizForm">
+            {% for question in questions %}
+                {# Ambil index dari loop pertanyaan saat ini (dimulai dari 0) #}
+                {% set question_index = loop.index0 %}
+                <div class="question-block">
+                    <p class="question-text">{{ loop.index }}. {{ question.question }}</p> {# loop.index dimulai dari 1 #}
+                    <div class="options">
+                        {% for option in question.options %}
+                            <label>
+                                <input type="radio" name="question_{{ question_index }}" value="{{ option }}" required>
+                                {{ option }}
+                            </label><br>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+            <button type="submit">Kirim Jawaban</button>
+        </form>
+         <p class="back-link"><a href="{{ url_for('index') }}">Kembali ke Beranda</a></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

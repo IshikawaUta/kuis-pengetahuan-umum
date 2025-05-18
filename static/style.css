@@ -1,0 +1,217 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Styles for the Home Page Container */
+.container.home-container {
+    max-width: 600px; /* Maybe a slightly smaller width for home */
+    padding: 40px;
+    text-align: center; /* Center content on home page */
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Home Page Specific Styles */
+.home-container h1 {
+    color: #0056b3; /* Different color for home title */
+    margin-bottom: 20px;
+}
+
+.home-container p {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.total-questions-home {
+    font-weight: bold;
+    color: #007bff; /* Highlight the number of questions */
+}
+
+.start-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Styles for the Quiz Page */
+.question-block {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: left; /* Align text to the left within question blocks */
+}
+
+.question-text {
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 1.05em;
+}
+
+.options label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.options input[type="radio"] {
+    margin-right: 8px;
+    vertical-align: middle; /* Align radio button vertically with text */
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+.back-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.back-link a {
+     color: #007bff;
+     text-decoration: none;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Styles for the Results Page */
+.score {
+    color: #5cb85c; /* Green for score */
+    font-size: 1.5em; /* Larger score */
+    font-weight: bold;
+}
+
+.total-questions {
+     font-size: 1.2em;
+     font-weight: bold;
+}
+
+.results-summary {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    text-align: left; /* Align detail results to the left */
+}
+
+.result-item {
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.result-item p {
+    margin: 5px 0;
+}
+
+.result-item strong {
+    color: #333; /* Darker color for question number/text */
+}
+
+.result-item.correct {
+    background-color: #dff0d8; /* Light green */
+    border-left: 5px solid #5cb85c; /* Green */
+}
+
+.result-item.incorrect {
+    background-color: #f2dede; /* Light red */
+    border-left: 5px solid #d9534f; /* Red */
+}
+
+.feedback {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.feedback.correct {
+    color: #5cb85c; /* Green */
+}
+
+.feedback.incorrect {
+    color: #d9534f; /* Red */
+}
+
+.user-answer {
+    font-style: italic;
+    color: #777; /* Grayish for user answer */
+}
+
+.correct-answer {
+    font-weight: bold;
+    color: #5cb85c; /* Green for correct answer */
+}
+
+.retry-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: #0275d8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.retry-button:hover {
+    background-color: #025aa5;
+}

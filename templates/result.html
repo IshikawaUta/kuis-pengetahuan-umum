@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Kuis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Hasil Kuis Anda</h1>
+        <p>Skor Anda: <strong class="score">{{ score }}</strong> dari <strong class="total-questions">{{ total }}</strong></p>
+
+        <div class="results-summary">
+            {% for result in results %}
+                <div class="result-item {% if result.is_correct %}correct{% else %}incorrect{% endif %}">
+                    <p><strong>Pertanyaan {{ loop.index }}:</strong> {{ result.question }}</p>
+                    {% if result.is_correct %}
+                        <p class="feedback correct">Jawaban Anda Benar!</p>
+                    {% else %}
+                        <p class="feedback incorrect">Jawaban Anda Salah.</p>
+                        <p>Jawaban Anda: <span class="user-answer">{{ result.user_answer if result.user_answer is not none else 'Tidak Dijawab' }}</span></p>
+                        <p>Jawaban Benar: <span class="correct-answer">{{ result.correct_answer }}</span></p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+
+        <p><a href="{{ url_for('index') }}" class="retry-button">Kembali ke Beranda</a></p>
+    </div>
+
+</body>
+</html>

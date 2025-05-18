@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang di Kuis Pengetahuan Umum</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container home-container">
+        <h1>Selamat Datang di Kuis Pengetahuan Umum!</h1>
+        <p>Uji pengetahuan Anda dengan menjawab {{ num_questions_per_quiz }} pertanyaan yang dipilih secara acak.</p>
+        <p>Tersedia <strong class="total-questions-home">{{ total_questions_pool }}</strong> pertanyaan di kumpulan kami.</p>
+
+        <a href="{{ url_for('quiz_page') }}" class="start-button">Mulai Kuis</a>
+    </div>
+</body>
+</html>
