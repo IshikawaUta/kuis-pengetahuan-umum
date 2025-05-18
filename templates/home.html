@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        By. <strong>IshikawaUta</strong>
+    </div>
+
     <div class="container home-container">
         <h1>Selamat Datang di Kuis Pengetahuan Umum!</h1>
         <p>Uji pengetahuan Anda dengan menjawab {{ num_questions_per_quiz }} pertanyaan yang dipilih secara acak.</p>

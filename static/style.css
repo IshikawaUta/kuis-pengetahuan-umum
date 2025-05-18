@@ -11,6 +11,33 @@ body {
     color: #333;
 }
 
+.alert {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 20px;
+    background-color: white;
+    font-family: courier;
+    text-transform: uppercase;
+    color: #3498db;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.alert .closebtn {
+    margin-left: 15px;
+    color: #000000;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.alert .closebtn:hover {
+    color: #666666;
+}
+
 .container {
     background-color: #fff;
     padding: 30px;
